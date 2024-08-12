@@ -3,6 +3,10 @@
 }
 */
 
+body{
+    display: block;
+
+}
 
 #pageContent {
 
@@ -46,6 +50,11 @@ nav button {
 
     display: flex;    
     flex-direction: column;
+
+}
+
+#socialButtons {
+
     text-align: center;
 
 }
@@ -62,7 +71,6 @@ nav button {
 
     margin:0 auto;
     text-align: left;
-    text-justify: center;
 
 }
 
@@ -73,6 +81,12 @@ nav button {
 
 }
 
+.skillGroup h2 {
+
+    text-align: center;
+
+}
+
 .skillGroup p {
 
     padding: 25px;
@@ -80,6 +94,7 @@ nav button {
     margin-right: 0;
     background-color: lightgray;
     border-radius: 15px;
+    text-align: center;
 
 }
 
@@ -158,11 +173,13 @@ nav button {
 .workGrid {
 
     display: grid;
-    grid-template-columns: 1fr 25px 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas:
-    "localAdventures . grin"
-    "localAdventures . grin";
+    "localAdventures grin"
+    "localAdventures grin";
+
+    grid-gap: 25px;
 
 }
 
@@ -176,6 +193,7 @@ nav button {
     border-radius: 15px;
     background-color: black;
     position: relative;
+
 
 }
 
@@ -230,7 +248,6 @@ nav button {
 
 footer {
     width: 100%;
-    float: left;
     background-color: #373738;
     text-align: center;
     color: white;
@@ -250,6 +267,15 @@ footer p  {
 }
 
 /* Media Queries */
+
+@media only screen and (max-width: 1500px) {
+
+    #sideBar #socials {
+
+        display:none;
+     }
+
+}
 
 @media only screen and (max-width: 1000px) {
 
@@ -279,10 +305,16 @@ footer p  {
         
     }
 
+    #sideBar {
+
+        margin-right: 25;
+        
+    }
+
+
 }
 
-@media only screen and (max-width: 600px) {
-
+@media only screen and (max-width: 900px) {
 
     #sideBar {
         flex-direction: row;
@@ -311,6 +343,13 @@ footer p  {
         margin:0;
     
     }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+
+
 
     #heroBanner h1 {
         width: 100%;
