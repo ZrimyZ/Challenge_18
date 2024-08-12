@@ -207,6 +207,7 @@ nav button {
     display: block;
     position: absolute;
     top:75px;
+    left:25px;
     color: white;
     transition: .3s;
 
