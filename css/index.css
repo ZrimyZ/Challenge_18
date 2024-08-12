@@ -1,0 +1,302 @@
+/* {
+    border: red solid 1px;
+}
+*/
+
+
+#pageContent {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+/* Nav Section */
+
+nav {
+    display: flex;
+    vertical-align: top;
+    margin-left: auto;
+    text-align: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+nav button {
+    width: 33%;
+    height: 50px;
+}
+
+
+/* Sidebar / Skill Section */
+
+#sideBar {
+    display: flex;
+    width: 15%;
+    margin-left: 25px;
+    margin-right: 25px;
+    flex-direction: column;
+    grid-area: sideBar;
+}
+
+
+#sideBar #socials, .skillGroup, #sideBar img {
+
+    display: flex;    
+    flex-direction: column;
+    text-align: center;
+
+}
+
+#socials button {
+
+    padding:15px;
+    border-radius: 15px;
+    margin-top: 25px;
+
+}
+
+#socials p {
+
+    margin:0 auto;
+    text-align: left;
+    text-justify: center;
+
+}
+
+.skillGroup {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.skillGroup p {
+
+    padding: 25px;
+    margin-left:0;
+    margin-right: 0;
+    background-color: lightgray;
+    border-radius: 15px;
+
+}
+
+/* Body Section */
+
+#heroBanner {
+    display: flex;    
+    height: 600px;
+    padding: 1%;
+    position: relative;
+    color: white;
+}
+
+#heroBanner div {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+#heroBanner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    text-align: left;
+}
+
+#heroBannerImage2 {
+
+    display: none;
+}
+
+#heroBanner h1 {
+    width: 60%;
+    text-align: left;
+    margin-left: auto;
+}
+
+#heroBanner p {
+    width: 60%;
+    text-align: left;
+    margin-left: auto;
+}
+
+#heroBanner button{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+#portfolio h1{
+
+    text-align: center;
+    
+}
+
+#grin{
+
+    grid-area: grin;
+
+}
+
+#localAdventures{
+
+    grid-area: localAdventures;
+
+}
+
+.workGrid {
+
+    display: grid;
+    grid-template-columns: 1fr 25px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "localAdventures . grin"
+    "localAdventures . grin";
+
+}
+
+.workShowcase {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr min-content;
+    grid-template-areas: 
+    "title"
+    "img";
+    border-radius: 15px;
+    background-color: black;
+    position: relative;
+
+}
+
+.workShowcase h2 {
+
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+    color: white;
+    grid-area: title;
+
+}
+
+.workShowcase img {
+
+    width: 100%;
+    position: relative;
+    object-fit: contain;
+    z-index: 0;
+    border-radius: 0px 0px 15px 15px;
+    grid-area: img;
+
+}
+
+.workShowcase p {
+
+    display: none;
+    transition: .3s;
+
+}
+
+.workShowcase:hover p{
+
+    display: block;
+    position: absolute;
+    top:75px;
+    color: white;
+    transition: .3s;
+
+}
+
+.workShowcase:hover img{
+
+    filter: brightness(25%);
+    transition: .3s;
+
+
+}
+
+/* Footer Section */
+
+footer {
+    width: 100%;
+    float: left;
+    background-color: #373738;
+    text-align: center;
+    color: white;
+    grid-area: Footer;
+}
+
+footer div {
+    display: inline-block;
+    width: 45%;
+    text-align: center;
+    vertical-align: top;
+
+}
+
+footer p  {
+    text-align: center;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1000px) {
+
+    #heroBannerImage1 {
+
+        display: none;
+    }
+
+    #heroBannerImage2 {
+
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+
+    #sideBar {
+        flex-direction: row;
+        width: 100%;
+        margin:0;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+    }
+
+    #sideBar img, #sideBar #socials {
+
+       display:none;
+    }
+
+    .skillGroup {
+
+            width:33%;
+            height: 33%;
+        
+    }
+
+    #pageContent {
+
+        flex-direction: column;
+    
+    }
+
+    .workGrid {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "localAdventures"
+        "grin";
+    
+    }
+
+  }
