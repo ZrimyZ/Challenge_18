@@ -119,12 +119,16 @@ nav button {
     width: 60%;
     text-align: left;
     margin-left: auto;
+    margin-right: 25px;
+
 }
 
 #heroBanner p {
     width: 60%;
     text-align: left;
     margin-left: auto;
+    margin-right: 25px;
+
 }
 
 #heroBanner button{
@@ -259,6 +263,22 @@ footer p  {
         display: block;
     }
 
+    #heroBanner h1 {
+        width: 40%;
+        text-align: left;
+        margin-left: auto;
+        margin-right: 25px;
+    }
+    
+    #heroBanner p {
+        width: 35%;
+        text-align: left;
+        margin-left: auto;
+        margin-right: 0;
+
+        
+    }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -290,6 +310,21 @@ footer p  {
         flex-direction: column;
         margin:0;
     
+    }
+
+    #heroBanner h1 {
+        width: 100%;
+        text-align: left;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    
+    #heroBanner p {
+        width: 35%;
+        text-align: left;
+        margin-left: auto;
+        margin-right: 0;
+
     }
 
     .workGrid {
