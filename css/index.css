@@ -8,6 +8,12 @@ body{
 
 }
 
+h2 {
+
+    text-align: center;
+
+}
+
 #pageContent {
 
     display: flex;
@@ -74,6 +80,19 @@ nav button {
 
 }
 
+#skills{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.spacing {
+
+    display:none;
+
+}
+
 .skillGroup {
 
     display: flex;
@@ -84,6 +103,8 @@ nav button {
 .skillGroup h2 {
 
     text-align: center;
+    margin-top: 25px;
+    margin-bottom: 12.5px;
 
 }
 
@@ -92,6 +113,8 @@ nav button {
     padding: 25px;
     margin-left:0;
     margin-right: 0;
+    margin-top: 12.5px;
+    margin-bottom: 12.5px;
     background-color: lightgray;
     border-radius: 15px;
     text-align: center;
@@ -102,10 +125,11 @@ nav button {
 
 #heroBanner {
     display: flex;    
-    height: 600px;
-    padding: 1%;
+    height: 50vh;
+    padding: 25px;
     position: relative;
     color: white;
+    border-radius: 15px;
 }
 
 #heroBanner div {
@@ -134,7 +158,6 @@ nav button {
     width: 60%;
     text-align: left;
     margin-left: auto;
-    margin-right: 25px;
 
 }
 
@@ -142,7 +165,6 @@ nav button {
     width: 60%;
     text-align: left;
     margin-left: auto;
-    margin-right: 25px;
 
 }
 
@@ -178,8 +200,8 @@ nav button {
     grid-template-areas:
     "localAdventures grin"
     "localAdventures grin";
-
     grid-gap: 25px;
+    margin-bottom: 25px;
 
 }
 
@@ -193,7 +215,7 @@ nav button {
     border-radius: 15px;
     background-color: black;
     position: relative;
-
+    border: 1px solid black;
 
 }
 
@@ -201,9 +223,11 @@ nav button {
 
     text-align: center;
     padding: 15px;
-    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     color: white;
     grid-area: title;
+    vertical-align: middle;
 
 }
 
@@ -289,19 +313,22 @@ footer p  {
         display: block;
     }
 
+    #heroBanner {
+
+        height: 80vh;
+
+    }
+
     #heroBanner h1 {
         width: 40%;
         text-align: left;
         margin-left: auto;
-        margin-right: 25px;
     }
     
     #heroBanner p {
         width: 35%;
         text-align: left;
         margin-left: auto;
-        margin-right: 0;
-
         
     }
 
@@ -330,10 +357,23 @@ footer p  {
        display:none;
     }
 
+    #skills {
+
+        width: 100%;
+        flex-direction: row;
+
+    }
+
     .skillGroup {
 
-            width:33%;
-            height: 33%;
+        width: 100%;
+
+    }
+
+    .spacing {
+
+        display: block;
+        width:25px;
         
     }
 
@@ -348,21 +388,22 @@ footer p  {
 
 @media only screen and (max-width: 600px) {
 
+    #heroBanner {
 
+        padding: 10px;
 
+    }
 
     #heroBanner h1 {
         width: 100%;
         text-align: left;
         margin-left: 15px;
-        margin-right: 15px;
     }
     
     #heroBanner p {
         width: 35%;
         text-align: left;
         margin-left: auto;
-        margin-right: 0;
 
     }
 
